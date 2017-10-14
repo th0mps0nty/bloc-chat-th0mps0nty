@@ -1,7 +1,8 @@
 <nav>
   <h2>Bloc Chat</h2>
   <ui>
-    <li ng-repeat="room in home.rooms">{{ room.$value }}</li>
+    <li ng-repeat="room in home.rooms | orderBy:roomName">{{ room.roomName }}</li>
   </ui>
+  <button type="button" class="btn btn-default" ng-click="home.open()">Add Room</button> {{ newRoom }}
 </nav>
 <h1>Home Page</h1>
